@@ -26,3 +26,4 @@ This will create es6_examples dir in your Home directory. There you will find ht
 ## List of themes
 
 1. [Arrows and lexical this](arrows_and_lexic_this.html)
+2. [Classes](classes.html)

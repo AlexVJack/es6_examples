@@ -1,17 +1,100 @@
 <!DOCTYPE html>
 <!-- MOC - My Own Comment - just for fun -->
 <html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>ES-6 Basics!</title>
+    <meta charset="UTF-8">
+    <title>ES-6 Basics!</title>
 </head>
+
 <body>
 
-	<script>
-		// CLASSES
+    <script>
+        // CLASSES
 
-        
-	</script>
+        // MOC - this is how it was before ES6, actually there were no classes at all
+        function Animal(type) {
+            this.type = type;
+        }
+
+        Animal.prototype.identify = function () {
+            console.log(this.type);
+        }
+
+        var cat = new Animal('Cat');
+        cat.identify(); // Cat
+
+        // MOC - and this is how it works now
+        // this is commented because if you will start this as it is, you will catch an error:
+        // Uncaught SyntaxError: redeclaration of function Animal
+        // This means that you can not have a function and a class with the same name in ES6
+
+        //class Animal {
+        //    constructor(type) {
+        //        this.type = type;
+        //    }
+        //    identify() {
+        //        console.log(this.type);
+        //    }
+        //}
+        //
+        // let cat = new Animal('Cat');
+        // cat.identify();
+
+        // MOC - and this will work now as it has another name
+        class AnotherAnimal {
+            constructor(type) {
+                this.type = type;
+            }
+            identify() {
+                console.log(this.type);
+            }
+        }
+
+        let another_cat = new AnotherAnimal('Cat');
+        another_cat.identify();
+
+        // and here you can see that a class actually is a function
+        console.log(typeof AnotherAnimal);
+
+        // with this expression we can check the instance of what is an object
+        console.log(another_cat instanceof Animal); // false
+        console.log(another_cat instanceof AnotherAnimal); // true
+        console.log(another_cat instanceof Object); // true
+
+        // Getters and setters
+
+        class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+            get fullName() {  // keyword get with space and identifier creates getter
+                return this.firstName + ' ' + this.lastName;
+            }
+
+            set fullName(str) { // keyword set with space and identifier creates setter
+                let names = str.split(' ');
+                if (names.length === 2) {
+                    this.firstName = names[0];
+                    this.lastName = names[1];
+                } else {
+                    throw 'Invalid name format';
+                }
+            }
+        }
+
+        // here you see the work of getter
+        let mary = new Person('Mary', 'Doe');
+        console.log(mary.fullName); // Mary Doe
+
+        // and setter
+        mary.fullName = 'Mary William';
+        console.log(mary.fullName); // Mary William
+
+
+    </script>
 
 </body>
+
 </html>
