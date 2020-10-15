@@ -30,3 +30,4 @@ This will create es6_examples dir in your Home directory. There you will find ht
 1. [Arrows and lexical this](arrows_and_lexic_this.html)
 2. [Classes](classes.html)
 3. [Object Literal Syntax Extensions](object_literal_syntax_ext.html)
+4. [Template Strings](template_strings.html)
