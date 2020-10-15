@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES-6 Basics!</title>
+</head>
+
+<body>
+
+    <script>
+        // DESTRUCTURING
+        // Fairly I would call this the gentle destructuring :)
+
+        function getScores() {
+            return [70, 80, 90]
+        }
+
+        let [x, y, z] = getScores()
+        console.log(x)
+        console.log(y)
+        console.log(z)
+
+        // and we have the way to get the "rest" of the arguments
+        function getAnotherScores() {
+            return [70, 80, 90, 100]
+        }
+
+        let [a, b, ...args] = getAnotherScores()
+        console.log(a)
+        console.log(b)
+        console.log(args) // [90, 100]
+
+        // Nested array destructuring
+
+        function getProfile() {
+            return [
+                'John',
+                'Doe',
+                ['Red', 'Green', 'Blue']
+            ]
+        }
+
+        let [
+            firstName,
+            lastName,
+            [
+                color1,
+                color2,
+                color3
+            ]
+        ] = getProfile()
+
+        console.log(color1, color2, color3)
+        console.log(firstName, lastName)
+
+        // And this is an elegant one :)
+        // Function that return multiple values
+        var stat = (a, b) => {
+            return [
+                a + b,
+                (a + b) / 2,
+                a - b
+            ]
+        }
+
+        let [sum, average, difference] = stat(20, 10)
+        console.log(sum, average, difference)
+
+        // Destructuring function arguments
+        let display = (person) => console.log(`${person.firstName} ${person.lastName}`);
+
+        let person = {
+            firstName: 'John',
+            lastName: 'Doe'
+        };
+
+        display(person);
+
+
+    </script>
+
+</body>
+
+</html>
