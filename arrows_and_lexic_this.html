@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- MOC - My Own Comment - just for fun -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ES-6 Basics!</title>
+</head>
+<body>
+
+	<script>
+		// ARROWS AND LEXICAL THIS
+
+		// Expression bodies
+		var evens = [2, 4, 6, 8, 10] // ;)
+		var odds = evens.map(v => v + 1)
+		console.log('Given evens: ', evens)
+		console.log('Received odds: ', odds)
+		
+		var nums = evens.map((v, i) => v + i) // MOC - this works strange, if you add j as third parameter and + j to expression inside, you will receive a strange result
+		console.log('Received nums: ', nums)
+
+		//statement bodies
+		console.log('- - - - - - - - - - - - - -')
+		var fives = []
+		nums = [2, 5, 15, 23, 28, 30]
+		nums.forEach(v => {
+			if(v % 5===0)
+				fives.push(v)
+		})
+		console.log('Given nums: ', nums)
+		console.log('Received fives: ', fives)
+
+		//lexical this
+		console.log('- - - - - - - - - - - - - -')
+		var bob = {
+			_name: "Bob",
+			_friends: ['Jimmy'],
+			printFriends() {
+				this._friends.forEach(f =>
+					console.log(this._name + " knows " + f))
+			}
+		}
+		console.log(bob.printFriends()) // MOC - this prints Bob knows Jimmy and 'undefined' - why?
+
+		//lexical arguments
+		console.log('- - - - - - - - - - - - - -')
+		function square() {
+			let example = () => {
+				let numbers = []
+				for (let number of arguments) { // MOC - how interesting is this :)
+					numbers.push(number * number)
+				}
+				return numbers
+			}
+			return example()
+		}
+		console.log(square(2, 4, 8, 12, 16))
+
+	</script>
+
+</body>
+</html>
