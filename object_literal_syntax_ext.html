@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES-6 Basics!</title>
+</head>
+
+<body>
+
+    <script>
+        // OBJECT LITERAL SYNTAX EXTENSION
+
+        // Object literal is one of the most pupular patterns to create an objects in JavaScript
+        function createMachine(name, status) {
+            return {
+                name, // was name: name,
+                status // was status: status
+            };
+        }
+
+        var Server = createMachine('BigOne', 'works')
+        console.log(Server) // now you will receive an object in the console
+        console.log(Server.name) // this will return property - name
+        console.log(Server.status) // and this propery - status
+
+        // We can construct object literal from local variables
+        let name = 'Computer',
+            status = 'On';
+
+        let other_machine = {
+            name,
+            status
+        };
+
+        console.log(other_machine)
+        console.log(other_machine.name)
+        console.log(other_machine.status)
+
+        // Computed property name
+        let title = 'machine name';
+        let machine_two = {
+            [title]: 'server',
+            'machine hours': 10000
+        };
+
+        // we have to reference properties with spaces with square brackets
+        console.log(machine_two[title]); // server 
+        console.log(machine_two['machine hours']); // 10000
+
+        // Concise method syntax
+        let server = {
+            name: 'Server',
+            restart() { // function keyword and the colon (:) removed from here
+                console.log(`The ${this.name} is restarting...`);
+            }
+        };
+        server.restart()
+
+    </script>
+
+</body>
+
+</html>

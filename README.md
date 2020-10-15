@@ -1,10 +1,12 @@
 # ES-6 code examples
 
-Actually this is a trace of my study adventure with ES-6 (ECMAScript 2015 or ES2015). Formally you will find observations, remarks and some questions here. Will be glad if you will answer them, maybe comment, any communication experience is cool.
+Actually, this is a trace of my study adventure with ES-6 (ECMAScript 2015 or ES2015). Formally you will find observations, remarks and some questions here. Will be glad if you will answer them, maybe comment, any communication experience is cool.
 
 My learning was based mainly on this material - [https://babeljs.io/docs/en/learn](https://babeljs.io/docs/en/learn)
 and this - [https://www.javascripttutorial.net/es6/](https://www.javascripttutorial.net/es6/)
-and of course on this - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+and on this - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
+and this of course [ES-6 features by Luke Hoban](https://github.com/lukehoban/es6features#enhanced-object-literals)
 
 ## For younglings, newcomers and adventurers
 
@@ -27,3 +29,4 @@ This will create es6_examples dir in your Home directory. There you will find ht
 
 1. [Arrows and lexical this](arrows_and_lexic_this.html)
 2. [Classes](classes.html)
+3. [Object Literal Syntax Extensions](object_literal_syntax_ext.html)
