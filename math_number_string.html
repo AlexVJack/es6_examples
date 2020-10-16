@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES-6 Basics!</title>
+</head>
+
+<body>
+
+    <script>
+        // MATH + NUMBER + STRING
+
+        // Number
+        console.log(Number.EPSILON)
+        console.log(Number.isInteger(Infinity))
+        console.log(Number.isNaN("NaN"))
+
+        // Math
+        console.log(Math.acosh(3))
+        console.log(Math.hypot(3, 4))
+        console.log(Math.imul(Math.pow(2, 32) - 1, Math.pow(2, 32) - 2))
+
+        // String
+        console.log("abcde".includes("cd"))
+        console.log("abc".repeat(3))
+
+        // Array
+        console.log(Array.from(document.querySelectorAll("*")))
+        console.log(Array.of(1, 2, 3))
+        console.log([0, 0, 0].fill(7, 1))
+        console.log([1, 2, 3].findIndex(x => x == 2))
+
+        // Iterators
+        for (var num of ["a", "b", "c"].entries()) {
+            console.log(num)
+        }
+        for (var num of ["a", "b", "c"].keys()) {
+            console.log(num)
+        }
+        for (var num of ["a", "b", "c"].values()) {
+            console.log(num)
+        }
+
+    </script>
+
+</body>
+
+</html>

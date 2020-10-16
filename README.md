@@ -25,7 +25,7 @@ Enter this command to clone repo:
 git clone https://github.com/AlexVJack/es6_examples.git
 ``` 
 
-This will create es6_examples dir in your Home directory. There you will find html files. Simply run them in your browser. But as this is a JavaScript, to see the result, you have to start developer tools in your browser (F12 button). To see the code press one of the below links or open files locally with some of the code editors.
+This will create es6_examples dir in your Home directory. There you will find html files. Simply run them in your browser. But as this is a JavaScript, to see the result, you have to start developer tools in your browser (F12 button). To see the code press one of the links below or open files locally with some of the code editors.
 
 ## List of themes
 
@@ -41,3 +41,4 @@ This will create es6_examples dir in your Home directory. There you will find ht
 10. [Map + Set + WeakMap + WeakSet](map_set_weakmap_weakset.html)
 11. [Proxies](proxies.html)
 12. [Symbols](symbols.html)
+13. [Math + Number + String](math_number_string.html)
