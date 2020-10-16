@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES-6 Basics!</title>
+</head>
+
+<body>
+
+    <script>
+        // PROXIES
+
+        // If you want to wrap another object to change the behaviors of that object
+        // proxies are for you.
+
+        // Proxying a normal object
+        var target = {}
+        var handler = {
+            get: function (receiver, name) {
+                return `Hello, ${name}!`
+            }
+        }
+
+        var p = new Proxy(target, handler)
+        // here you will receive a proxy object
+        console.log(p)
+        // and here is the behavior
+        console.log(p.world)
+
+        // Proxying a function object
+        var target = function () { return "I am the target"; }
+        var handler = {
+            apply: function (receiver, ...args) {
+                return "I am the proxy"
+            }
+        }
+
+        var p = new Proxy(target, handler)
+        console.log(p())
+
+        // There are a lot of traps using the proxies
+        // Theme of traps are out of this trace but you can find it yourself
+
+    </script>
+
+</body>
+
+</html>
