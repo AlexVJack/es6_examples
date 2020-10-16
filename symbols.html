@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES-6 Basics!</title>
+</head>
+
+<body>
+
+    <script>
+        // SYMBOLS
+
+        // Creating symbols
+        let s = Symbol('foo')
+        console.log(s)
+
+        // this will produce false - symbol creates a new unique value each time you call it
+        console.log(Symbol() === Symbol())
+
+        // this will show - symbol
+        console.log(typeof s)
+
+        // Using symbol example
+        let statuses = {
+            OPEN: Symbol('Open'),
+            IN_PROGRESS: Symbol('In progress'),
+            COMPLETED: Symbol('Completed'),
+            HOLD: Symbol('On hold'),
+            CANCELED: Symbol('Canceled')
+        }
+
+        let status = Symbol('status')
+        let task = {
+            [status]: statuses.OPEN,
+            description: 'Learn ES6 Symbol'
+        };
+        // this will produce an interesting object
+        console.log(task)
+
+        // and this is my understanding of symbols
+        let a = Symbol('a')
+        let b = Symbol('a')
+
+        console.log(a)
+        console.log(b)
+        // this will produce false
+        console.log(a===b)
+
+        // as this will produce true
+        a = 'a'
+        b = 'a'
+        console.log(a===b)
+
+    </script>
+
+</body>
+
+</html>

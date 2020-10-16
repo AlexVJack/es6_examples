@@ -40,3 +40,4 @@ This will create es6_examples dir in your Home directory. There you will find ht
 9. [Generators](generators.html)
 10. [Map + Set + WeakMap + WeakSet](map_set_weakmap_weakset.html)
 11. [Proxies](proxies.html)
+12. [Symbols](symbols.html)
