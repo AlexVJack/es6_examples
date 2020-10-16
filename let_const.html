@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES-6 Basics!</title>
+</head>
+
+<body>
+
+    <script>
+        // LET + CONST
+
+        // with "let" keyword we can declare block-scoped variables.
+        // variables declared with "const" are immutable
+        // If you want to see some errors uncomment lines 22 and 26
+        function f() {
+            {
+                let x
+                {
+                    // this is ok since it's a block scoped name
+                    const x = "sneaky"
+                    console.log(x)
+                    // x = "foo" // error, was just defined with `const` above
+                }
+                // this is ok since it was declared with `let`
+                x = "bar"
+                console.log(x)
+                // let x = "inner" // error, already declared above in this block        
+            }
+        }
+
+        // another example of let scoped in the for loop
+        for (let i = 0; i < 5; i++) {
+            console.log(`Inside the loop: ${i}`)
+        }
+
+        // console.log(`Outside the loop: ${i}`) // this line will throw an error Uncaught ReferenceError: i is not defined
+        // and the last comment:
+        // var variable can be redeclared, but when you try to redeclare let
+        // this will throw an error
+
+    </script>
+
+</body>
+
+</html>

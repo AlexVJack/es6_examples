@@ -1,4 +1,4 @@
-# ES-6 code examples
+# ES-6 study with code examples
 
 Actually, this is a trace of my study adventure with ES-6 (ECMAScript 2015 or ES2015). Formally you will find observations, remarks and some questions here. Will be glad if you will answer them, maybe comment, any communication experience is cool.
 
@@ -10,7 +10,9 @@ and this of course [ES-6 features by Luke Hoban](https://github.com/lukehoban/es
 
 ## For younglings, newcomers and adventurers
 
-You can install this repo simply by cloning it. Here are some instructions for Linux.
+You can use this repo simply by cloning it. And you do not need any development environments. It will work in any modern browser.
+
+Here are some instructions for Linux.
 
 Start your terminal (CTRL + ALT + T)
 
@@ -33,3 +35,4 @@ This will create es6_examples dir in your Home directory. There you will find ht
 4. [Template Strings](template_strings.html)
 5. [Destructuring](destructuring.html)
 6. [Default + Rest + Spread](default_rest_spread.html)
+7. [Let + Const](let_const.html)
