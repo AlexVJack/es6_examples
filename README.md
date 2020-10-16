@@ -37,3 +37,4 @@ This will create es6_examples dir in your Home directory. There you will find ht
 6. [Default + Rest + Spread](default_rest_spread.html)
 7. [Let + Const](let_const.html)
 8. [Iterators + For..Of](iterators_for_of.html)
+9. [Generators](generators.html)

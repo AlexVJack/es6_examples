@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES-6 Basics!</title>
+</head>
+
+<body>
+
+    <script>
+        // GENERATORS
+
+        // this example I found most simple and explicit
+        // here we create generator
+        function* generate() {
+            console.log('invoked 1st time')
+            yield 1
+            console.log('invoked 2nd time')
+            yield 2
+        }
+
+        // here we invoke generator
+        let gen = generate()
+
+        // here we call it first time
+        let result = gen.next()
+        console.log(result)
+
+        // here we call it for the second time
+        result = gen.next()
+        console.log(result)
+
+        // and here the third time
+        // just look at the console result and you will understand what generator is
+        result = gen.next()
+        console.log(result)
+        console.log('- - - - - - - - - - - - -')
+
+        // a little bit of complexity
+        var fibonacci = {
+            [Symbol.iterator]: function* () {
+                var pre = 0, cur = 1;
+                for (; ;) {
+                    var temp = pre;
+                    pre = cur;
+                    cur += temp;
+                    yield cur;
+                }
+            }
+        }
+
+        // just look at console how complex object this line returns :)
+        // is it infinite?
+        console.log(fibonacci)
+
+        // as generator is iterative we can use for..of to iterate
+        for (var n of fibonacci) {
+            // truncate the sequence at 1000
+            if (n > 1000)
+                break;
+            console.log(n);
+        }
+
+    </script>
+
+</body>
+
+</html>
