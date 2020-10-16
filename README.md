@@ -42,3 +42,4 @@ This will create es6_examples dir in your Home directory. There you will find ht
 11. [Proxies](proxies.html)
 12. [Symbols](symbols.html)
 13. [Math + Number + String](math_number_string.html)
+14. [Promises](promises.html)
